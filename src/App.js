@@ -1,9 +1,10 @@
 import './App.css';
+import Recife from './routes/recife';
 
 function App() {
   return (
     <div>
-      <h1>Hello</h1>
+      <Recife />
     </div>
   );
 }
