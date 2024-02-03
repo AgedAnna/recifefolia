@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/recifefolia/static/css/main.b93788e7.css",
+    "main.js": "/recifefolia/static/js/main.6168527b.js",
+    "static/media/logo.svg": "/recifefolia/static/media/logo.4e03bcc4952f5ed4f226bf5090489149.svg",
+    "index.html": "/recifefolia/index.html",
+    "main.b93788e7.css.map": "/recifefolia/static/css/main.b93788e7.css.map",
+    "main.6168527b.js.map": "/recifefolia/static/js/main.6168527b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b93788e7.css",
+    "static/js/main.6168527b.js"
+  ]
+}
