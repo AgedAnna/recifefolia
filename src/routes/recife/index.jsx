@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { Carousel } from "antd";
+import Horarios from "./horario";
 
 const contentStyle = {
   height: "500px",
@@ -47,6 +48,9 @@ const Recife = () => {
           />
         </div>
       </Carousel>
+      <div className="Horarios">
+        <Horarios />
+      </div>
     </div>
   );
 };
