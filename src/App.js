@@ -1,12 +1,11 @@
 import './App.css';
 import Recife from './routes/recife';
-
-// import Olinda from './routes/olinda/olinda'; 
+import Olinda from './routes/olinda/olinda'; 
 
 function App() {
   return (
     <div>
-      <Recife />
+      <Olinda/>
     </div>
   );
 }
