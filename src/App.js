@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import Recife from './routes/recife';
 import Olinda from './routes/olinda/olinda';
