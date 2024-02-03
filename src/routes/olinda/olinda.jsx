@@ -19,22 +19,34 @@ const imgstyle = {
 };
 
 const Olinda = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpenTumaraca, setIsModalOpenTumaraca] = useState(false);
+  const [isModalOpenBalancaRolha, setIsModalOpenBalancaRolha] = useState(false);
 
-  const showModal = () => {
-    setIsModalOpen(true);
+  const showModalTumaraca = () => {
+    setIsModalOpenTumaraca(true);
   };
 
-  const handleOk = () => {
-    setIsModalOpen(false);
+  const showModalBalancaRolha = () => {
+    setIsModalOpenBalancaRolha(true);
   };
 
-  const handleCancel = () => {
-    setIsModalOpen(false);
+  const handleOkTumaraca = () => {
+    setIsModalOpenTumaraca(false);
+  };
+
+  const handleCancelTumaraca = () => {
+    setIsModalOpenTumaraca(false);
+  };
+
+  const handleOkBalancaRolha = () => {
+    setIsModalOpenBalancaRolha(false);
+  };
+
+  const handleCancelBalancaRolha = () => {
+    setIsModalOpenBalancaRolha(false);
   };
 
   return (
-
     <div className="carrousel">
       <Carousel autoplay>
         <div>
@@ -51,42 +63,32 @@ const Olinda = () => {
             alt="Slide 2"
           />
         </div>
-      </Carousel>
-
-      <div className="titleMain">
-        <h1>Horários e datas das festividades de Olinda.</h1>
-      </div>
-      
+      </Carousel>    
       <div className="atrações">
+        <h1>Confira nossas atrações, datas e locais.</h1>
+        <div>
+          <Button type="primary" onClick={showModalTumaraca}>
+            Ensaio Tumaraca - Raízes de Pai Adão 
+          </Button>
+          <Modal title="Informações" visible={isModalOpenTumaraca} onOk={handleOkTumaraca} onCancel={handleCancelTumaraca}>
+            <p>O ensaio comunitário chega ao Sítio de Pai Adão, sede do Maracatu Nação Raízes de Pai Adão.</p>
+            <p>Horário: 19h </p>
+            <p>Quinta-feira -01/02/2024- </p>
+            <p>Local: Sítio de Pai Adão, na Estrada Velha de Água Fria</p>
+          </Modal>
+        </div>
 
-        <ul>
-          <li>
-          <Button type="primary" onClick={showModal}>
-        Ensaio Tumaraca - Raízes de Pai Adão 
-        </Button>
-        <Modal title="Informações" visible={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <p>O ensaio comunitário chega ao Sítio de Pai Adão, sede do Maracatu Nação Raízes de Pai Adão.</p>
-          <p>Horário: 19h </p>
-          <p>Quinta-feira -01/02/2024- </p>
-          <p>Local: Sítio de Pai Adão, na Estrada Velha de Água Fria</p>
-        </Modal>
-          </li>
-        </ul>
-        
-        <ul>
-          <li>
-          <Button type="primary" onClick={showModal}>
-          Bloco Balança Rolha 
-        </Button>
-        <Modal title="Informações" visible={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <p>Atrações: Madeira Delay, Orquestra de Frevo e Clara Sobral.</p>
-          <p>Horário: 17h </p>
-          <p>Sexta-feira -02/02/2024- </p>
-          <p>Local: calçadão da Avenida Boa Viagem, 2170 - Quiosque 13 do Posto 5</p>
-        </Modal>
-          </li>
-        </ul>
-
+        <div>
+          <Button type="primary" onClick={showModalBalancaRolha}>
+            Bloco Balança Rolha 
+          </Button>
+          <Modal title="Informações" visible={isModalOpenBalancaRolha} onOk={handleOkBalancaRolha} onCancel={handleCancelBalancaRolha}>
+            <p>Atrações: Madeira Delay, Orquestra de Frevo e Clara Sobral.</p>
+            <p>Horário: 17h </p>
+            <p>Sexta-feira -02/02/2024- </p>
+            <p>Local: calçadão da Avenida Boa Viagem, 2170 - Quiosque 13 do Posto 5</p>
+          </Modal>
+        </div>
       </div>
     </div>
   );
